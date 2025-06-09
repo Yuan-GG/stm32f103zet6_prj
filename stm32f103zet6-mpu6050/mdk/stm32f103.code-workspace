@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "swi2c.h": "c",
+            "mpu6050.h": "c"
+        }
+    },
+    "extensions": {}
+}
