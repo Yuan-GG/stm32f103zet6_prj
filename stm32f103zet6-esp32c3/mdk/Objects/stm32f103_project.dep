@@ -1,0 +1,1102 @@
+Dependencies for Project 'stm32f103', Target 'project': (DO NOT MODIFY !)
+F (..\app\main.c)(0x6870EB70)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\string.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\led.h)(0x683C08E9)
+I (..\app\key.h)(0x683C08E8)
+I (..\app\key_exti.h)(0x683C08EB)
+I (..\app\esp_usart.h)(0x687078E8)
+I (D:\Keil_5\ARM\ARMCC\include\stdarg.h)(0x56FE42E0)
+I (..\driver\st7735\st7735.h)(0x68419EAC)
+I (..\driver\st7735\stfonts.h)(0x6841913E)
+I (..\driver\mpu6050\mpu6050.h)(0x6846DD5D)
+I (..\app\swi2c.h)(0x684695F9)
+I (..\app\timer.h)(0x684957EE)
+I (..\app\rtc.h)(0x686FE8AC)
+I (..\driver\esp_at\esp_at.h)(0x68596BE5)
+I (..\app\weather.h)(0x66CC3E05)
+I (..\app\main.h)(0x68485A8C)
+F (..\app\led.c)(0x683C08EA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\led.h)(0x683C08E9)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+F (..\app\key.c)(0x68485CB9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\key.h)(0x683C08E8)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+F (..\app\key_exti.c)(0x683C08EB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\key_exti.o --omf_browse .\objects\key_exti.crf --depend .\objects\key_exti.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\key.h)(0x683C08E8)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (..\app\key_exti.h)(0x683C08EB)
+F (..\app\lcd_spi.c)(0x686F9797)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\lcd_spi.o --omf_browse .\objects\lcd_spi.crf --depend .\objects\lcd_spi.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\lcd_spi.h)(0x6841547F)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+F (..\app\swi2c.c)(0x6868F8EF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\swi2c.o --omf_browse .\objects\swi2c.crf --depend .\objects\swi2c.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\swi2c.h)(0x684695F9)
+F (..\app\delay.c)(0x68485E6A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\app\main.h)(0x68485A8C)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\app\esp_usart.c)(0x6870851D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\esp_usart.o --omf_browse .\objects\esp_usart.crf --depend .\objects\esp_usart.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\string.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\esp_usart.h)(0x687078E8)
+I (D:\Keil_5\ARM\ARMCC\include\stdarg.h)(0x56FE42E0)
+I (..\app\led.h)(0x683C08E9)
+F (..\app\rtc.c)(0x686FE894)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\rtc.o --omf_browse .\objects\rtc.crf --depend .\objects\rtc.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\string.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\rtc.h)(0x686FE8AC)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+F (..\app\timer.c)(0x68499E61)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\timer.h)(0x684957EE)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+F (..\app\weather.c)(0x66CC3DFE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\weather.o --omf_browse .\objects\weather.crf --depend .\objects\weather.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\string.h)(0x56FE42DE)
+I (..\app\weather.h)(0x66CC3E05)
+F (..\driver\esp_at\esp_at.c)(0x6870ED1D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\esp_at.o --omf_browse .\objects\esp_at.crf --depend .\objects\esp_at.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\string.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\esp_usart.h)(0x687078E8)
+I (D:\Keil_5\ARM\ARMCC\include\stdarg.h)(0x56FE42E0)
+I (..\driver\esp_at\esp_at.h)(0x68596BE5)
+F (..\driver\mpu6050\mpu6050.c)(0x68485EA2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\mpu6050.o --omf_browse .\objects\mpu6050.crf --depend .\objects\mpu6050.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (D:\Keil_5\ARM\ARMCC\include\math.h)(0x56FE42D6)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\swi2c.h)(0x684695F9)
+I (..\driver\mpu6050\mpu6050.h)(0x6846DD5D)
+F (..\driver\st7735\st7735.c)(0x684AADCE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\st7735.o --omf_browse .\objects\st7735.crf --depend .\objects\st7735.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\app\main.h)(0x68485A8C)
+I (..\app\lcd_spi.h)(0x6841547F)
+I (D:\Keil_5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
+I (..\driver\st7735\st7735.h)(0x68419EAC)
+I (..\driver\st7735\stfonts.h)(0x6841913E)
+F (..\driver\st7735\stfonts.c)(0x68419125)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stfonts.o --omf_browse .\objects\stfonts.crf --depend .\objects\stfonts.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\driver\st7735\stfonts.h)(0x6841913E)
+F (..\driver\st7735\stimage.c)(0x66CA0B41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stimage.o --omf_browse .\objects\stimage.crf --depend .\objects\stimage.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\driver\st7735\stimage.h)(0x66CA0ADF)
+F (..\firmware\cmsis\device\startup_stm32f10x_hd.s)(0x61605445)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 520" --pd "STM32F10X_HD SETA 1"--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d)
+F (..\firmware\cmsis\core\core_cm3.c)(0x61605444)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\core_cm3.o --omf_browse .\objects\core_cm3.crf --depend .\objects\core_cm3.d)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+F (..\firmware\cmsis\device\system_stm32f10x.c)(0x61605442)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\misc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_adc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_adc.o --omf_browse .\objects\stm32f10x_adc.crf --depend .\objects\stm32f10x_adc.d)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_bkp.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_bkp.o --omf_browse .\objects\stm32f10x_bkp.crf --depend .\objects\stm32f10x_bkp.d)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_can.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_can.o --omf_browse .\objects\stm32f10x_can.crf --depend .\objects\stm32f10x_can.d)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_cec.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_cec.o --omf_browse .\objects\stm32f10x_cec.crf --depend .\objects\stm32f10x_cec.d)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_crc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_crc.o --omf_browse .\objects\stm32f10x_crc.crf --depend .\objects\stm32f10x_crc.d)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_dac.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_dac.o --omf_browse .\objects\stm32f10x_dac.crf --depend .\objects\stm32f10x_dac.d)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_dbgmcu.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_dbgmcu.o --omf_browse .\objects\stm32f10x_dbgmcu.crf --depend .\objects\stm32f10x_dbgmcu.d)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_dma.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_dma.o --omf_browse .\objects\stm32f10x_dma.crf --depend .\objects\stm32f10x_dma.d)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_exti.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_exti.o --omf_browse .\objects\stm32f10x_exti.crf --depend .\objects\stm32f10x_exti.d)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_flash.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_flash.o --omf_browse .\objects\stm32f10x_flash.crf --depend .\objects\stm32f10x_flash.d)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_fsmc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_fsmc.o --omf_browse .\objects\stm32f10x_fsmc.crf --depend .\objects\stm32f10x_fsmc.d)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_gpio.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_i2c.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_i2c.o --omf_browse .\objects\stm32f10x_i2c.crf --depend .\objects\stm32f10x_i2c.d)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_iwdg.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_iwdg.o --omf_browse .\objects\stm32f10x_iwdg.crf --depend .\objects\stm32f10x_iwdg.d)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_pwr.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_pwr.o --omf_browse .\objects\stm32f10x_pwr.crf --depend .\objects\stm32f10x_pwr.d)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_rcc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_rcc.o --omf_browse .\objects\stm32f10x_rcc.crf --depend .\objects\stm32f10x_rcc.d)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_rtc.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_rtc.o --omf_browse .\objects\stm32f10x_rtc.crf --depend .\objects\stm32f10x_rtc.d)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_sdio.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_sdio.o --omf_browse .\objects\stm32f10x_sdio.crf --depend .\objects\stm32f10x_sdio.d)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_spi.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_spi.o --omf_browse .\objects\stm32f10x_spi.crf --depend .\objects\stm32f10x_spi.d)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_tim.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_tim.o --omf_browse .\objects\stm32f10x_tim.crf --depend .\objects\stm32f10x_tim.d)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_usart.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_usart.o --omf_browse .\objects\stm32f10x_usart.crf --depend .\objects\stm32f10x_usart.d)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
+F (..\firmware\driver\src\stm32f10x_wwdg.c)(0x61605445)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\st7735 -I ..\driver\mpu6050 -I ..\driver\esp_at-I E:\project\stm32f1_prj\stm32f103zet6-esp32c3\mdk\RTE-I D:\Keil_5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\Keil_5\ARM\CMSIS\Include-D__UVISION_VERSION="520" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DUSART_STRING -DSTM32F10X_HD-o .\objects\stm32f10x_wwdg.o --omf_browse .\objects\stm32f10x_wwdg.crf --depend .\objects\stm32f10x_wwdg.d)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x61605445)
+I (..\firmware\cmsis\device\stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\core\core_cm3.h)(0x61605444)
+I (D:\Keil_5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (..\firmware\cmsis\device\system_stm32f10x.h)(0x61605444)
+I (..\firmware\cmsis\device\stm32f10x_conf.h)(0x61605441)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x61605445)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x61605445)
+I (..\firmware\driver\inc\misc.h)(0x61605445)
