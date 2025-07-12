@@ -5,7 +5,7 @@
 
 static lcd_spi_send_finish_callback_t lcd_spi_send_finish_callback;
 
-static void LCD_SPI_GPIO_Init()
+static void lcd_spi_gpio_init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     // SPI1_SCK
@@ -16,7 +16,7 @@ static void LCD_SPI_GPIO_Init()
     GPIO_WriteBit(GPIOA, GPIO_Pin_5 | GPIO_Pin_7, Bit_SET);
 }
 
-static void LCD_SPI_NVIC_Init(void)
+static void lcd_spi_nvic_init(void)
 {
     // 使用DMA发送
     NVIC_InitTypeDef NVIC_InitStructure;
@@ -28,7 +28,7 @@ static void LCD_SPI_NVIC_Init(void)
     NVIC_Init(&NVIC_InitStructure);
 }
 
-static void LCD_SPI_LowLevel_Init(void)
+static void lcd_spi_lowlevel_init(void)
 {
     SPI_InitTypeDef SPI_InitStructure;
 
@@ -51,11 +51,11 @@ static void LCD_SPI_LowLevel_Init(void)
  * @param  None
  * @retval None
  */
-void LCD_SPI_Init(void)
+void lcd_spi_init(void)
 {
-    LCD_SPI_GPIO_Init();
-    LCD_SPI_NVIC_Init();
-    LCD_SPI_LowLevel_Init();
+    lcd_spi_gpio_init();
+    lcd_spi_nvic_init();
+    lcd_spi_lowlevel_init();
 }
 
 /**
@@ -64,7 +64,7 @@ void LCD_SPI_Init(void)
  * @param  size
  * @retval None
  */
-void LCD_SPI_Write_Sync(uint8_t *data, uint16_t size)
+void lcd_spi_write_sync(uint8_t *data, uint16_t size)
 {
     for (uint16_t i = 0; i < size; i++)
     {
@@ -80,7 +80,7 @@ void LCD_SPI_Write_Sync(uint8_t *data, uint16_t size)
  * @param  size
  * @retval None
  */
-void LCD_SPI_Write_Async(uint8_t *data, uint16_t size)
+void lcd_spi_write_async(uint8_t *data, uint16_t size)
 {
     DMA_Cmd(LCD_SPI_DMA_CHANNEL, DISABLE);
     DMA_DeInit(LCD_SPI_DMA_CHANNEL);
@@ -107,7 +107,7 @@ void LCD_SPI_Write_Async(uint8_t *data, uint16_t size)
  * @param  cb-回调函数
  * @retval None
  */
-void LCD_SPI_Send_Finish_Register(lcd_spi_send_finish_callback_t cb)
+void lcd_spi_send_finish_register(lcd_spi_send_finish_callback_t cb)
 {
     lcd_spi_send_finish_callback = cb;
 }

@@ -14,9 +14,9 @@
 #define SDA_HIGH()  GPIO_SetBits(SDA_PORT, SDA_PIN)
 #define SDA_LOW()   GPIO_ResetBits(SDA_PORT, SDA_PIN)
 #define SDA_READ()  GPIO_ReadInputDataBit(SDA_PORT, SDA_PIN)
-#define DELAY()     I2C_Delay()
+#define DELAY()     i2c_delay()
 
-static void I2C_Delay(void)
+static void i2c_delay(void)
 {
     for (uint32_t n = 0; n < 14; n++)
     {
@@ -24,7 +24,7 @@ static void I2C_Delay(void)
     }
 }
 
-static void I2C_Start(void)
+static void i2c_start(void)
 {
     SDA_HIGH();
     SCL_HIGH();
@@ -34,7 +34,7 @@ static void I2C_Start(void)
     SCL_LOW();
 }
 
-static void I2C_Stop(void)
+static void i2c_stop(void)
 {
     SDA_LOW();
     DELAY();
@@ -49,7 +49,7 @@ static void I2C_Stop(void)
  * @param  data
  * @return bool
  */
-static bool I2C_WriteByte(uint8_t data)
+static bool i2c_write_byte(uint8_t data)
 {
     for (uint8_t i = 0; i < 8; i++)
     {
@@ -80,7 +80,7 @@ static bool I2C_WriteByte(uint8_t data)
     return true;
 }
 
-static uint8_t I2C_ReadByte(bool ack)
+static uint8_t i2c_read_byte(bool ack)
 {
     uint8_t data = 0;
     // 释放SDA
@@ -109,7 +109,7 @@ static uint8_t I2C_ReadByte(bool ack)
     return data;
 }
 
-static void I2C_IO_Init(void)
+static void i2c_io_init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -124,44 +124,44 @@ static void I2C_IO_Init(void)
     GPIO_Init(SDA_PORT, &GPIO_InitStructure);
 }
 
-void SWI2C_Init(void)
+void swi2c_init(void)
 {
-    I2C_IO_Init();
+    i2c_io_init();
 }
 
-bool SWI2C_Write(uint8_t addr, uint8_t reg, uint8_t* data, uint16_t length)
+bool swi2c_write(uint8_t addr, uint8_t reg, uint8_t* data, uint16_t length)
 {
-    I2C_Start();
-    if (!I2C_WriteByte(addr << 1))
+    i2c_start();
+    if (!i2c_write_byte(addr << 1))
     {
-        I2C_Stop();
+        i2c_stop();
         return false;
     }
-    I2C_WriteByte(reg);
+    i2c_write_byte(reg);
     for (uint16_t i = 0; i < length; i++)
     {
-        I2C_WriteByte(data[i]);
+        i2c_write_byte(data[i]);
     }
-    I2C_Stop();
+    i2c_stop();
     return true;
 }
 
-bool SWI2C_Read(uint8_t addr, uint8_t reg, uint8_t* data, uint16_t length)
+bool swi2c_read(uint8_t addr, uint8_t reg, uint8_t* data, uint16_t length)
 {
-    I2C_Start();
-    if (!I2C_WriteByte(addr << 1))
+    i2c_start();
+    if (!i2c_write_byte(addr << 1))
     {
-        I2C_Stop();
+        i2c_stop();
         return false;
     }
-    I2C_WriteByte(reg);
-    I2C_Start();
-    I2C_WriteByte((addr << 1) | 0x01);
+    i2c_write_byte(reg);
+    i2c_start();
+    i2c_write_byte((addr << 1) | 0x01);
     for (uint16_t i = 0; i < length; i++)
     {
         // 最后一个字节发送NACK
-        data[i] = I2C_ReadByte(i == length - 1 ? false : true);
+        data[i] = i2c_read_byte(i == length - 1 ? false : true);
     }
-    I2C_Stop();
+    i2c_stop();
     return true;
 }

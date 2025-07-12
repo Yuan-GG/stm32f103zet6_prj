@@ -95,16 +95,16 @@ static const uint8_t init_cmd_list[] =
 static volatile bool spi_async_done;
 static uint8_t gram_buff[GRAM_BUFFER_SIZE];
 
-static void SPI_On_Async_Finish(void)
+static void spi_on_async_fnish(void)
 {
     spi_async_done = true;
 }
 
-static void ST7735_Select(void) {
+static void st7735_select(void) {
     GPIO_ResetBits(CS_PORT, CS_PIN);
 }
 
-static void ST7735_Unselect(void) {
+static void st7735_unselect(void) {
     GPIO_SetBits(CS_PORT, CS_PIN);
 }
 
@@ -113,32 +113,32 @@ static void ST7735_Unselect(void) {
  * @param  None
  * @retval None
  */
-static void ST7735_Reset(void) {
+static void st7735_reset(void) {
     GPIO_ResetBits(RES_PORT, RES_PIN);
-    Delayms(2);
+    delayms(2);
     GPIO_SetBits(RES_PORT, RES_PIN);
-    Delayms(150);
+    delayms(150);
 }
 
-static void ST7735_Bl_On(void) {
+static void st7735_bl_on(void) {
     GPIO_SetBits(BLK_PORT, BLK_PIN);
 }
 
-static void ST7735_Write_Cmd(uint8_t cmd)
+static void st7735_write_cmd(uint8_t cmd)
 {
     GPIO_ResetBits(DC_PORT, DC_PIN);
-    LCD_SPI_Write_Sync(&cmd, 1);
+    lcd_spi_write_sync(&cmd, 1);
 }
 
-static void ST7735_Write_Data(uint8_t* data, size_t size)
+static void st7735_write_data(uint8_t* data, size_t size)
 {
     GPIO_SetBits(DC_PORT, DC_PIN);
     spi_async_done = false;
-    LCD_SPI_Write_Async(data, size);
+    lcd_spi_write_async(data, size);
     while (!spi_async_done);
 }
 
-static void ST7735_GPIO_Init(void) {
+static void st7735_gpio_init(void) {
     GPIO_InitTypeDef GPIO_InitStructure;
 
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -164,7 +164,7 @@ static void ST7735_GPIO_Init(void) {
     GPIO_WriteBit(BLK_PORT, BLK_PIN, Bit_RESET);
 }
 
-static void ST7735_Exec_Cmds(const uint8_t* cmd_list) {
+static void st7735_exec_cmds(const uint8_t* cmd_list) {
     while (1) {
         uint8_t cmd = *cmd_list++;
         uint8_t num = *cmd_list++;
@@ -172,33 +172,33 @@ static void ST7735_Exec_Cmds(const uint8_t* cmd_list) {
             if (num == CMD_EOF)
                 break;
             else
-                Delayms(num * 10);
+                delayms(num * 10);
         }
         else {
-            ST7735_Write_Cmd(cmd);
+            st7735_write_cmd(cmd);
             if (num > 0) {
-                ST7735_Write_Data((uint8_t*)cmd_list, num);
+                st7735_write_data((uint8_t*)cmd_list, num);
             }
             cmd_list += num;
         }
     }
 }
 
-static void ST7735_Set_Window(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
+static void st7735_set_window(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
 {
     // column address set
-    ST7735_Write_Cmd(ST7735_CASET);
+    st7735_write_cmd(ST7735_CASET);
     uint8_t data[] = { 0x00, x0 + ST7735_XSTART, 0x00, x1 + ST7735_XSTART };
-    ST7735_Write_Data(data, sizeof(data));
+    st7735_write_data(data, sizeof(data));
 
     // row address set
-    ST7735_Write_Cmd(ST7735_RASET);
+    st7735_write_cmd(ST7735_RASET);
     data[1] = y0 + ST7735_YSTART;
     data[3] = y1 + ST7735_YSTART;
-    ST7735_Write_Data(data, sizeof(data));
+    st7735_write_data(data, sizeof(data));
 
     // write to RAM
-    ST7735_Write_Cmd(ST7735_RAMWR);
+    st7735_write_cmd(ST7735_RAMWR);
 }
 
 /**
@@ -206,21 +206,21 @@ static void ST7735_Set_Window(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
  * @param  None
  * @retval None
  */
-void ST7735_Init(void) {
-    LCD_SPI_Init();
-    LCD_SPI_Send_Finish_Register(SPI_On_Async_Finish);
-    ST7735_GPIO_Init();
+void st7735_init(void) {
+    lcd_spi_init();
+    lcd_spi_send_finish_register(spi_on_async_fnish);
+    st7735_gpio_init();
 
-    ST7735_Reset();
+    st7735_reset();
 
-    ST7735_Select();
-    ST7735_Exec_Cmds(init_cmd_list);
-    ST7735_Unselect();
+    st7735_select();
+    st7735_exec_cmds(init_cmd_list);
+    st7735_unselect();
 
-    ST7735_Bl_On();
+    st7735_bl_on();
 }
 
-void ST7735_Fill_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
+void st7735_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
     if (x >= ST7735_WIDTH || y >= ST7735_HEIGHT)
         return;
     if (x + w - 1 >= ST7735_WIDTH)
@@ -228,8 +228,8 @@ void ST7735_Fill_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t c
     if (y + h - 1 >= ST7735_HEIGHT)
         h = ST7735_HEIGHT - y;
 
-    ST7735_Select();
-    ST7735_Set_Window(x, y, x + w - 1, y + h - 1);
+    st7735_select();
+    st7735_set_window(x, y, x + w - 1, y + h - 1);
 
     // ��λ��ǰ
     uint8_t pixel[2] = { color >> 8, color & 0xFF };
@@ -250,27 +250,27 @@ void ST7735_Fill_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t c
                 *pbuff++ = pixel[1];
             }
         }
-        ST7735_Write_Data(gram_buff, size * 2);
+        st7735_write_data(gram_buff, size * 2);
     }
 
-    ST7735_Unselect();
+    st7735_unselect();
 }
 
-void ST7735_Fill_Screen(uint16_t color) {
-    ST7735_Fill_Rect(0, 0, ST7735_WIDTH, ST7735_HEIGHT, color);
+void st7735_fill_screen(uint16_t color) {
+    st7735_fill_rect(0, 0, ST7735_WIDTH, ST7735_HEIGHT, color);
 }
 
-void ST7735_Draw_Pixel(uint16_t x, uint16_t y, uint16_t color)
+void st7735_draw_pixel(uint16_t x, uint16_t y, uint16_t color)
 {
     if (x >= ST7735_WIDTH || y >= ST7735_HEIGHT)
         return;
 
     uint8_t data[] = { color >> 8, color & 0xFF };
 
-    ST7735_Select();
-    ST7735_Set_Window(x, y, x + 1, y + 1);
-    ST7735_Write_Data(data, sizeof(data));
-    ST7735_Unselect();
+    st7735_select();
+    st7735_set_window(x, y, x + 1, y + 1);
+    st7735_write_data(data, sizeof(data));
+    st7735_unselect();
 }
 
 /**
@@ -282,11 +282,11 @@ void ST7735_Draw_Pixel(uint16_t x, uint16_t y, uint16_t color)
  * @param  bgcolor: ������ɫ
  * @retval None
  */
-void ST7735_Write_Char(uint16_t x, uint16_t y, char ch, st_fonts_t* font, uint16_t color, uint16_t bgcolor)
+void st7735_write_char(uint16_t x, uint16_t y, char ch, st_fonts_t* font, uint16_t color, uint16_t bgcolor)
 {
-    ST7735_Select();
+    st7735_select();
 
-    ST7735_Set_Window(x, y, x + font->width - 1, y + font->height - 1);
+    st7735_set_window(x, y, x + font->width - 1, y + font->height - 1);
 
     // ����ȡ��
     uint32_t bytes_per_line = (font->width + 7) / 8;
@@ -311,17 +311,17 @@ void ST7735_Write_Char(uint16_t x, uint16_t y, char ch, st_fonts_t* font, uint16
         }
     }
 
-    ST7735_Write_Data(gram_buff, pbuff - gram_buff);
+    st7735_write_data(gram_buff, pbuff - gram_buff);
 
-    ST7735_Unselect();
+    st7735_unselect();
 }
 
-void ST7735_Write_Font(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index, uint16_t color, uint16_t bgcolor)
+void st7735_write_font(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index, uint16_t color, uint16_t bgcolor)
 {
-    ST7735_Write_Char(x, y, index, font, color, bgcolor);
+    st7735_write_char(x, y, index, font, color, bgcolor);
 }
 
-void ST7735_Write_Fonts(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index, uint32_t count, uint16_t color, uint16_t bgcolor)
+void st7735_write_fonts(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index, uint32_t count, uint16_t color, uint16_t bgcolor)
 {
     for (uint32_t i = index; i < count && i < font->count; i++)
     {
@@ -334,7 +334,7 @@ void ST7735_Write_Fonts(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index
                 break;
             }
         }
-        ST7735_Write_Font(x, y, font, i, color, bgcolor);
+        st7735_write_font(x, y, font, i, color, bgcolor);
         x += font->width;
     }
 }
@@ -347,7 +347,7 @@ void ST7735_Write_Fonts(uint16_t x, uint16_t y, st_fonts_t* font, uint32_t index
  * @param  bgcolor: ������ɫ
  * @retval None
  */
-void ST7735_Write_String(uint16_t x, uint16_t y, const char* str, st_fonts_t* font, uint16_t color, uint16_t bgcolor)
+void st7735_write_string(uint16_t x, uint16_t y, const char* str, st_fonts_t* font, uint16_t color, uint16_t bgcolor)
 {
     while (*str)
     {
@@ -380,14 +380,14 @@ void ST7735_Write_String(uint16_t x, uint16_t y, const char* str, st_fonts_t* fo
                 break;
         }
 
-        ST7735_Write_Char(x, y, *str, font, color, bgcolor);
+        st7735_write_char(x, y, *str, font, color, bgcolor);
         x += font->width;
         str++;
     }
 
 }
 
-void ST7735_Draw_Image(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t* data)
+void st7735_draw_image(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t* data)
 {
     if ((x >= ST7735_WIDTH) || (y >= ST7735_HEIGHT))
         return;
@@ -396,8 +396,8 @@ void ST7735_Draw_Image(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t* 
     if ((y + h - 1) >= ST7735_HEIGHT)
         return;
 
-    ST7735_Select();
-    ST7735_Set_Window(x, y, x + w - 1, y + h - 1);
-    ST7735_Write_Data(data, w * h * 2);
-    ST7735_Unselect();
+    st7735_select();
+    st7735_set_window(x, y, x + w - 1, y + h - 1);
+    st7735_write_data(data, w * h * 2);
+    st7735_unselect();
 }

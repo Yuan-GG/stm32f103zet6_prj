@@ -4,7 +4,7 @@
 
 static timer_elapsed_callback_t timer_elapsed_callback;
  
-void Timer_Init(uint32_t period_ms){
+void timer_init(uint32_t period_ms){
   TIM_TimeBaseInitTypeDef TIM_TimeBaseStruct;
   TIM_TimeBaseStruct.TIM_Prescaler = 72 - 1;      // 72MHz系统时钟频率，每个tick为1us
   TIM_TimeBaseStruct.TIM_Period = period_ms * 1000 - 1;
@@ -22,15 +22,15 @@ void Timer_Init(uint32_t period_ms){
   NVIC_Init(&NVIC_InitStructure);
 }
 
-void Timer_Start(void){
+void timer_start(void){
   TIM_Cmd(TIM2, ENABLE);
 }
 
-void Timer_Stop(void){
+void timer_stop(void){
   TIM_Cmd(TIM2, DISABLE);
 }
 
-void Timer_Elapsed_Register(timer_elapsed_callback_t cb){
+void timer_elapsed_register(timer_elapsed_callback_t cb){
   timer_elapsed_callback = cb;
 }
 
@@ -48,7 +48,7 @@ void TIM2_IRQHandler(void){
  * @param  period_us
  * @return None
  */
-void PWM_Init(uint32_t period_us){
+void pwm_init(uint32_t period_us){
   GPIO_InitTypeDef GPIO_InitStructure;
   // ch1/2
   GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_6 | GPIO_Pin_7;
@@ -92,7 +92,7 @@ void PWM_Init(uint32_t period_us){
  *                 所以0~1000对应0~100%
  * @return None
  */
-void PWM_SetDuty(uint32_t ch, uint32_t duty_us){
+void pwm_set_duty(uint32_t ch, uint32_t duty_us){
   switch (ch)
   {
     case 1:TIM_SetCompare1(TIM3, duty_us); break;
@@ -108,7 +108,7 @@ void PWM_SetDuty(uint32_t ch, uint32_t duty_us){
  * @param  None
  * @return None
  */
-void PWM_Start(void){
+void pwm_start(void){
   TIM_Cmd(TIM3, ENABLE);
 }
 
@@ -117,6 +117,6 @@ void PWM_Start(void){
  * @param  None
  * @return None
  */
-void PWM_Stop(void){
+void pwm_stop(void){
   TIM_Cmd(TIM3, DISABLE);
 }

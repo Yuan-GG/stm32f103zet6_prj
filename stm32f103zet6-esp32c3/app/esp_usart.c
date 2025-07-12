@@ -31,7 +31,7 @@ bool esp_usart_rxFlag = false;
 static esp_usart_receive_callback_t esp_usart_receive_callback;
 static esp_usart_send_finish_callback_t esp_usart_send_finish_callback;
 
-static void ESP_USART2_GPIO_Init(void) {
+static void esp_usart2_gpio_init(void) {
     /* Configure GPIO */
     GPIO_InitTypeDef GPIO_InitStructure;
     // 鉴于这个PIN的default的AF就有ESP_USART_R/TX，所以不用remap
@@ -46,7 +46,7 @@ static void ESP_USART2_GPIO_Init(void) {
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(ESP_USART2_PORT, &GPIO_InitStructure);
 }
-static void ESP_USART2_NVIC_Init(void) {
+static void esp_usart2_nvic_init(void) {
     /* Configure ESP_USART NVIC */
     NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
@@ -56,7 +56,7 @@ static void ESP_USART2_NVIC_Init(void) {
     NVIC_Init(&NVIC_InitStructure);
 }
 
-static void ESP_USART2_LowLevel_Init(void) {
+static void esp_usart2_lowlevel_init(void) {
     /* Configure USART2 */
     USART_InitTypeDef USART_InitStructure;
     USART_InitStructure.USART_BaudRate = 115200;
@@ -73,11 +73,11 @@ static void ESP_USART2_LowLevel_Init(void) {
   * @param  None
   * @retval None
   */
-void ESP_USART2_Init(void) {
+void esp_usart2_init(void) {
 
-    ESP_USART2_GPIO_Init();
-    ESP_USART2_NVIC_Init();
-    ESP_USART2_LowLevel_Init();
+    esp_usart2_gpio_init();
+    esp_usart2_nvic_init();
+    esp_usart2_lowlevel_init();
 
     /* Enable USART2 Receive interrupts */
     USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
@@ -91,7 +91,7 @@ void ESP_USART2_Init(void) {
   * @param  None
   * @retval None
   */
-static void ESP_USART2_SendByte(uint8_t data) {
+static void esp_usart2_send_byte(uint8_t data) {
     // 写入TDR
     USART_SendData(USART2, data);
     // 等待硬件清零
@@ -104,9 +104,9 @@ static void ESP_USART2_SendByte(uint8_t data) {
   * @param  length，长度
   * @retval None
   */
-void ESP_USART2_SendData(uint8_t* data, uint16_t length) {
+void esp_usart2_send_data(uint8_t* data, uint16_t length) {
     for (uint16_t i = 0; i < length; i++) {
-        ESP_USART2_SendByte(data[i]);
+        esp_usart2_send_byte(data[i]);
     }
 }
 
@@ -115,9 +115,9 @@ void ESP_USART2_SendData(uint8_t* data, uint16_t length) {
   * @param  str
   * @retval None
   */
-void ESP_USART2_SendString(const char* str) {
+void esp_usart2_send_string(const char* str) {
     uint16_t len = strlen(str);
-    ESP_USART2_SendData((uint8_t*)str, len);
+    esp_usart2_send_data((uint8_t*)str, len);
 }
 
 /**
@@ -125,13 +125,13 @@ void ESP_USART2_SendString(const char* str) {
   * @param  format, ...
   * @retval None
   */
-void ESP_USART2_Printf(char* format, ...) {
+void esp_usart2_printf(char* format, ...) {
     char str[100];
     va_list arg;
     va_start(arg, format);
     vsprintf(str, format, arg);
     va_end(arg);
-    ESP_USART2_SendString(str);
+    esp_usart2_send_string(str);
 }
 
 /**
@@ -139,7 +139,7 @@ void ESP_USART2_Printf(char* format, ...) {
   * @param  esp_usart_receive_callback_t
   * @retval None
   */
-void ESP_USART2_Receive_Register(esp_usart_receive_callback_t cb) {
+void esp_usart2_receive_register(esp_usart_receive_callback_t cb) {
     esp_usart_receive_callback = cb;
 }
 
@@ -148,7 +148,7 @@ void ESP_USART2_Receive_Register(esp_usart_receive_callback_t cb) {
   * @param  esp_usart_receive_callback_t
   * @retval None
   */
-void ESP_USART2_Send_Finish_Register(esp_usart_send_finish_callback_t cb) {
+void esp_usart2_send_finish_register(esp_usart_send_finish_callback_t cb) {
     esp_usart_send_finish_callback = cb;
 }
 
@@ -238,7 +238,7 @@ void USART2_IRQHandler(void)
   * @param  None
   * @retval None
   */
-bool ESP_USART2_RxGetFlag(void) {
+bool esp_usart2_rx_getflag(void) {
     return esp_usart_rxFlag;
 }
 
@@ -247,7 +247,7 @@ bool ESP_USART2_RxGetFlag(void) {
   * @param  None
   * @retval None
   */
-static void ESP_USART2_RxClearFlag(void) {
+static void esp_usart2_rx_clearflag(void) {
     esp_usart_rxFlag = false;
 }
 
@@ -256,7 +256,7 @@ static void ESP_USART2_RxClearFlag(void) {
   * @param  None
   * @retval None
   */
-void ESP_USART2_SendRxPacket(void) {
-    ESP_USART2_SendString(esp_usart_rxPacket);
-    ESP_USART2_RxClearFlag();
+void esp_usart2_rx_sendpacket(void) {
+    esp_usart2_send_string(esp_usart_rxPacket);
+    esp_usart2_rx_clearflag();
 }

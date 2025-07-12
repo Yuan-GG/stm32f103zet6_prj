@@ -10,9 +10,9 @@
 
 
 typedef void(* lcd_spi_send_finish_callback_t)();
-void LCD_SPI_Init(void);
-void LCD_SPI_Write_Sync(uint8_t *data, uint16_t size);
-void LCD_SPI_Write_Async(uint8_t *data, uint16_t size);
-void LCD_SPI_Send_Finish_Register(lcd_spi_send_finish_callback_t cb);
+void lcd_spi_init(void);
+void lcd_spi_write_sync(uint8_t *data, uint16_t size);
+void lcd_spi_write_async(uint8_t *data, uint16_t size);
+void lcd_spi_send_finish_register(lcd_spi_send_finish_callback_t cb);
 
 #endif /* __LCD_SPI_H  */

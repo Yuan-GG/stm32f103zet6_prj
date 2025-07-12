@@ -6,16 +6,16 @@
 #include <stdint.h>
 
 
-bool ESP_AT_Init(void);
-bool ESP_AT_Send_Cmd(const char* cmd, const char** rsp, uint32_t* length, uint32_t timeout);
-bool ESP_AT_Send_Data(const char* data, uint32_t length);
+bool esp_at_init(void);
+bool esp_at_send_cmd(const char* cmd, const char** rsp, uint32_t* length, uint32_t timeout);
+bool esp_at_send_data(const char* data, uint32_t length);
 
-bool ESP_AT_Reset(void);
+bool esp_at_reset(void);
 
-bool ESP_AT_Wifi_Init(void);
-bool ESP_AT_Wifi_Connect(const char* ssid, const char* pwd);
-bool ESP_AT_Http_Get(const char* url, const char** rsp, uint32_t* length, uint32_t timeout);
-bool ESP_AT_Time_Get(uint32_t* timestamp);
-bool ESP_AT_SNTP_Init(void);
+bool esp_at_wifi_init(void);
+bool esp_at_wifi_connect(const char* ssid, const char* pwd);
+bool esp_at_http_get(const char* url, const char** rsp, uint32_t* length, uint32_t timeout);
+bool esp_at_time_get(uint32_t* timestamp);
+bool esp_at_sntp_init(void);
 
 #endif /* __ESP_AT_H__ */

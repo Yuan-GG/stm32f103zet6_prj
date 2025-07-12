@@ -12,7 +12,7 @@
 
 static key_press_callback_t key_press_callback;
 
-void Key_Exti_Init(void){
+void key_exti_init(void){
     GPIO_InitTypeDef GPIO_InitStructure;
     /* Configure PE.04 pin as input floating */
     GPIO_InitStructure.GPIO_Pin = KEY_PIN;
@@ -42,18 +42,18 @@ void Key_Exti_Init(void){
 }
 
 
-void Key_Exti_Register(key_press_callback_t callback){
+void key_exti_register(key_press_callback_t callback){
     key_press_callback = callback;
 }
 
-// Íâ²¿ÖÐ¶Ï×îºÃ±ðÐ´°´¼ü
+// ï¿½â²¿ï¿½Ð¶ï¿½ï¿½ï¿½Ã±ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
 void EXTI4_IRQHandler(void){
     if(EXTI_GetITStatus(KEY_EXTI_LINE) == SET){
-        if(Key_Pressed()){
+        if(key_pressed()){
             if(key_press_callback){
                 key_press_callback();
             }
-            Key_WaitRelease();
+            key_wait_release();
         }
         EXTI_ClearITPendingBit(KEY_EXTI_LINE);
     }

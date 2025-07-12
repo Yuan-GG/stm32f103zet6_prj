@@ -13,9 +13,9 @@ typedef struct{
   uint8_t second;
 } rtc_date_t;
 
-void RTC_Init(void);
-void RTC_SetDate(rtc_date_t *date);
-void RTC_GetDate(rtc_date_t *date);
+void rtc_init(void);
+void rtc_set_date(rtc_date_t *date);
+void rtc_get_date(rtc_date_t *date);
 void rtc_set_timestamp(uint32_t timestamp);
 void rtc_get_timestamp(uint32_t *timestamp);
 

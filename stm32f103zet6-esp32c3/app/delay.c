@@ -3,7 +3,7 @@
 #include "stm32f10x.h"
 
 
-void Delayus(uint32_t us){
+void delayus(uint32_t us){
     SysTick->LOAD = us * (SystemCoreClock / 1000000) - 1;
     SysTick->VAL = 0;
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk;
@@ -11,9 +11,9 @@ void Delayus(uint32_t us){
     SysTick->CTRL = 0;
 }
 
-void Delayms(uint32_t ms){
+void delayms(uint32_t ms){
     while (ms--){
-        Delayus(1000);
+        delayus(1000);
     }
 }
 

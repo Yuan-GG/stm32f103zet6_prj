@@ -61,23 +61,23 @@ static void Board_LowLevel_Init(){
 int main(){
     Board_LowLevel_Init();
     
-    Led_Init();
-    RTC_Init();
+    led_init();
+    rtc_init();
 
-    ST7735_Init();
-    ST7735_Fill_Screen(ST7735_BLACK);
+    st7735_init();
+    st7735_fill_screen(ST7735_BLACK);
 
-    Delayms(2000);
+    delayms(2000);
 
-    if (!ESP_AT_Init())
+    if (!esp_at_init())
     {
         while (1);
     }
-    if (!ESP_AT_Wifi_Init())
+    if (!esp_at_wifi_init())
     {
         while (1);
     }
-    if (!ESP_AT_Wifi_Connect(wifi_ssid, wifi_password))
+    if (!esp_at_wifi_connect(wifi_ssid, wifi_password))
     {
         while (1);
     }
@@ -89,35 +89,35 @@ int main(){
 
     while(1){
         t++;
-        Delayms(1000);
+        delayms(1000);
 
         rtc_date_t date;
-        RTC_GetDate(&date);
+        rtc_get_date(&date);
         snprintf(str, sizeof(str), "%04d-%02d-%02d", date.year, date.month, date.day);
-        ST7735_Write_String(0, 0, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
+        st7735_write_string(0, 0, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
         snprintf(str, sizeof(str), "%02d:%02d:%02d", date.hour, date.minute, date.second);
-        ST7735_Write_String(0, 16, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
+        st7735_write_string(0, 16, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
 
         // 1min请求一次
         if(!weather_ok || t % 60 == 0){
             const char *rsp;
-            weather_ok = ESP_AT_Http_Get(weather_url, &rsp, NULL, 10000);
+            weather_ok = esp_at_http_get(weather_url, &rsp, NULL, 10000);
             weather_t weather;
             weather_parse(rsp, &weather);
 
             snprintf(str, sizeof(str), "%s", "maoming");
-            ST7735_Write_String(0, 64, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
+            st7735_write_string(0, 64, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
             snprintf(str, sizeof(str), "%s", weather.weather);
-            ST7735_Write_String(0, 80, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
+            st7735_write_string(0, 80, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
             snprintf(str, sizeof(str), "%s", weather.temperature);
-            ST7735_Write_String(0, 96, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
+            st7735_write_string(0, 96, str, &font_ascii_8x16, ST7735_WHITE, ST7735_BLACK);
 
             if (!sntp_ok || t % 3600 == 0)
             {
                 uint32_t ts;
-                sntp_ok = ESP_AT_SNTP_Init();
-                Delayms(1000);
-                ESP_AT_Time_Get(&ts);
+                sntp_ok = esp_at_sntp_init();
+                delayms(1000);
+                esp_at_time_get(&ts);
                 rtc_set_timestamp(ts + 8 * 60 * 60);
             }
         }

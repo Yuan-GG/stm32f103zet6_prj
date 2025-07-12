@@ -23,10 +23,10 @@
  * @return None
  */
 bool MPU6050_Init(void){
-    SWI2C_Init();
+    swi2c_init();
     // read whoami
     uint8_t whoami;
-    SWI2C_Read(MPU6050_ADDR, WHO_AM_I_REG, &whoami, 1);
+    swi2c_read(MPU6050_ADDR, WHO_AM_I_REG, &whoami, 1);
     if (whoami != MPU6050_ADDR){
         return false;
     }
@@ -35,20 +35,20 @@ bool MPU6050_Init(void){
     
     // reset the device
     data = 0x80;
-    SWI2C_Write(MPU6050_ADDR, PWR_MGMT_1_REG, &data, 1);
-    Delayms(10);
+    swi2c_write(MPU6050_ADDR, PWR_MGMT_1_REG, &data, 1);
+    delayms(10);
 
     // set the sample rate to 1kHz
     data = 0x07;
-    SWI2C_Write(MPU6050_ADDR, SMPLRT_DIV_REG, &data, 1);
+    swi2c_write(MPU6050_ADDR, SMPLRT_DIV_REG, &data, 1);
 
     // set the accelerometer scale range to ±2g
     data = 0x00;
-    SWI2C_Write(MPU6050_ADDR, ACCEL_CONFIG_REG, &data, 1);
+    swi2c_write(MPU6050_ADDR, ACCEL_CONFIG_REG, &data, 1);
 
     // set the gyroscope scale range to ±250°/s
     data = 0x00;
-    SWI2C_Write(MPU6050_ADDR, GYRO_CONFIG_REG, &data, 1);
+    swi2c_write(MPU6050_ADDR, GYRO_CONFIG_REG, &data, 1);
 
     return true;
 }
@@ -62,7 +62,7 @@ bool MPU6050_Read_Accel(mpu6050_accel_t *accel){
     bool ret;
     uint8_t data[6];
 
-    ret = SWI2C_Read(MPU6050_ADDR, ACCEL_XOUT_H_REG, data, 6);
+    ret = swi2c_read(MPU6050_ADDR, ACCEL_XOUT_H_REG, data, 6);
     if(!ret)
         return false;
 
@@ -77,7 +77,7 @@ bool MPU6050_Read_Gyro(mpu6050_gyro_t *gyro){
     bool ret;
     uint8_t data[6];
 
-    ret = SWI2C_Read(MPU6050_ADDR, GYRO_XOUT_H_REG, data, 6);
+    ret = swi2c_read(MPU6050_ADDR, GYRO_XOUT_H_REG, data, 6);
     if(!ret)
         return false;
 
@@ -91,7 +91,7 @@ bool MPU6050_Read_Temper(float *temper){
     bool ret;
     uint8_t data[2];
 
-    ret = SWI2C_Read(MPU6050_ADDR, TEMP_OUT_H_REG, data, 2);
+    ret = swi2c_read(MPU6050_ADDR, TEMP_OUT_H_REG, data, 2);
     if(!ret)
         return false;
     

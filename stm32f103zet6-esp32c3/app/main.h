@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 
-void Delayus(uint32_t us);
-void Delayms(uint32_t ms);
+void delayus(uint32_t us);
+void delayms(uint32_t ms);
 
 #endif /* __MAIN_H  */

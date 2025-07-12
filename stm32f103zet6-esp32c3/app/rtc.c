@@ -4,7 +4,7 @@
 #include "rtc.h"
 
 
-static bool Date_Validate(const rtc_date_t *date)
+static bool date_validate(const rtc_date_t *date)
 {
     if (date->year < 1970 || date->year > 2099)
         return false;
@@ -22,7 +22,7 @@ static bool Date_Validate(const rtc_date_t *date)
     return true;
 }
 
-uint32_t Date_To_Ts(const rtc_date_t *date)
+static uint32_t date_to_ts(const rtc_date_t *date)
 {
     uint16_t year = date->year;
     uint8_t month = date->month;
@@ -48,7 +48,7 @@ uint32_t Date_To_Ts(const rtc_date_t *date)
     return ts;
 }
 
-void Ts_To_Date(uint32_t seconds, rtc_date_t *date)
+static void ts_to_date(uint32_t seconds, rtc_date_t *date)
 {
     uint32_t leapyears = 0, yearhours = 0;
     const uint32_t mdays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -118,7 +118,7 @@ void Ts_To_Date(uint32_t seconds, rtc_date_t *date)
     date->day = seconds;
 }
 
-void RTC_Init(void){
+void rtc_init(void){
   RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
   RCC_RTCCLKCmd(ENABLE);
   RTC_WaitForSynchro();
@@ -128,22 +128,22 @@ void RTC_Init(void){
   RTC_WaitForLastTask();
 }
 
-void RTC_SetDate(rtc_date_t *date){
-  if(!Date_Validate(date))
+void rtc_set_date(rtc_date_t *date){
+  if(!date_validate(date))
     return;
 
-  uint32_t ts = Date_To_Ts(date);
+  uint32_t ts = date_to_ts(date);
 
   RTC_WaitForLastTask();
   RTC_SetCounter(ts);
   RTC_WaitForLastTask();
 }
 
-void RTC_GetDate(rtc_date_t *date){
+void rtc_get_date(rtc_date_t *date){
   uint32_t ts = RTC_GetCounter();
 
   if (date){
-      Ts_To_Date(ts, date);
+      ts_to_date(ts, date);
   }
 }
 

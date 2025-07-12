@@ -6,7 +6,19 @@
     ],
     "settings": {
         "files.associations": {
-            "sstream": "c"
+            "sstream": "c",
+            "main.h": "c",
+            "stm32f10x.h": "c",
+            "stdint.h": "c",
+            "key.h": "c",
+            "key_exti.h": "c",
+            "lcd_spi.h": "c",
+            "st7735.h": "c",
+            "led.h": "c",
+            "swi2c.h": "c",
+            "stdbool.h": "c",
+            "stdio.h": "c",
+            "timer.h": "c"
         }
     },
     "extensions": {}

@@ -24,7 +24,7 @@ static bool at_rxReady;
 static uint8_t at_rxResult;
 
 
-static void On_USART_Received(uint8_t data){
+static void on_usart_received(uint8_t data){
 
     // 没有数据请求，不接收数据
     if(!at_rxReady){
@@ -59,13 +59,13 @@ static void On_USART_Received(uint8_t data){
     
 }
 
-bool ESP_AT_Init(void){
+bool esp_at_init(void){
     at_rxReady = false;
 
-    ESP_USART2_Init();
-    ESP_USART2_Receive_Register(On_USART_Received);
+    esp_usart2_init();
+    esp_usart2_receive_register(on_usart_received);
 
-    return ESP_AT_Reset();
+    return esp_at_reset();
 }
 
 /**
@@ -76,17 +76,17 @@ bool ESP_AT_Init(void){
   * @param timeout: 超时时间
   * @retval None
   */
-bool ESP_AT_Send_Cmd(const char* cmd, const char** rsp, uint32_t* length, uint32_t timeout){
+bool esp_at_send_cmd(const char* cmd, const char** rsp, uint32_t* length, uint32_t timeout){
     // 清空上次接收的状态
     at_rxLen = 0;
     at_rxReady = true;
     at_rxResult = RX_RESULT_FAIL;
 
-    ESP_USART2_SendString(cmd);
-    ESP_USART2_SendString("\r\n");
+    esp_usart2_send_string(cmd);
+    esp_usart2_send_string("\r\n");
     
     while(at_rxReady && timeout--){
-        Delayms(1);
+        delayms(1);
     }
 
     at_rxReady = false;
@@ -100,83 +100,83 @@ bool ESP_AT_Send_Cmd(const char* cmd, const char** rsp, uint32_t* length, uint32
     return at_rxResult == RX_RESULT_OK;
 }
 
-bool ESP_AT_Send_Data(const char* data, uint32_t length){
+bool esp_at_send_data(const char* data, uint32_t length){
 
-    ESP_USART2_SendData((uint8_t *)data, length);
+    esp_usart2_send_data((uint8_t *)data, length);
 
     return true;
 }
 
-bool ESP_AT_Reset(void){
+bool esp_at_reset(void){
     // 复位esp32
-    if (!ESP_AT_Send_Cmd("AT+RESTORE", NULL, NULL, 1000)){
+    if (!esp_at_send_cmd("AT+RESTORE", NULL, NULL, 1000)){
         return false;
     }
-    Delayms(2000);
+    delayms(2000);
 
     // 关闭回显
-    if (!ESP_AT_Send_Cmd("ATE0", NULL, NULL, 1000)){
+    if (!esp_at_send_cmd("ATE0", NULL, NULL, 1000)){
         return false;
     }
 
     // 关闭存储
-    if(!ESP_AT_Send_Cmd("AT+SYSSTORE=0", NULL, NULL, 1000)){
+    if(!esp_at_send_cmd("AT+SYSSTORE=0", NULL, NULL, 1000)){
         return false;
     }
 
     return true;
 }
 
-bool ESP_AT_Wifi_Init(void){
+bool esp_at_wifi_init(void){
     // 设置为 station 模式
-    if(!ESP_AT_Send_Cmd("AT+CWMODE=1", NULL, NULL, 1000)){
+    if(!esp_at_send_cmd("AT+CWMODE=1", NULL, NULL, 1000)){
         return false;
     }
     return true;
 }
 
-bool ESP_AT_Wifi_Connect(const char* ssid, const char* pwd){
+bool esp_at_wifi_connect(const char* ssid, const char* pwd){
     char cmd[64];
 
     // 连接 wifi
     snprintf(cmd, sizeof(cmd), "AT+CWJAP=\"%s\",\"%s\"", ssid, pwd);
-    if(!ESP_AT_Send_Cmd(cmd, NULL, NULL, 10000)){
+    if(!esp_at_send_cmd(cmd, NULL, NULL, 10000)){
         return false;
     }
 
     return true;
 }
 
-bool ESP_AT_Http_Get(const char* url, const char** rsp, uint32_t* length, uint32_t timeout){
+bool esp_at_http_get(const char* url, const char** rsp, uint32_t* length, uint32_t timeout){
     char cmd[128];
 
     snprintf(cmd, sizeof(cmd), "AT+HTTPCGET=\"%s\"", url);
-    if(!ESP_AT_Send_Cmd(cmd, rsp, length, 10000)){
+    if(!esp_at_send_cmd(cmd, rsp, length, 10000)){
         return false;
     }
 
     return true;
 }
 
-bool ESP_AT_SNTP_Init(void){
+bool esp_at_sntp_init(void){
     // 设置为 SNTP 模式
-    if(!ESP_AT_Send_Cmd("AT+CIPSNTPCFG=1,8,\"cn.ntp.org.cn\",\"ntp.sjtu.edu.cn\"", NULL, NULL, 1000)){
+    if(!esp_at_send_cmd("AT+CIPSNTPCFG=1,8,\"cn.ntp.org.cn\",\"ntp.sjtu.edu.cn\"", NULL, NULL, 1000)){
         return false;
     }
 
     // 查询 SNTP 时间
-    if(!ESP_AT_Send_Cmd("AT+CIPSNTPTIME?", NULL, NULL, 1000)){
+    if(!esp_at_send_cmd("AT+CIPSNTPTIME?", NULL, NULL, 1000)){
         return false;
     }
 
     return true;
 }
 
-bool ESP_AT_Time_Get(uint32_t* timestamp){
+bool esp_at_time_get(uint32_t* timestamp){
     const char *rsp;
     uint32_t length;
 
-    if(!ESP_AT_Send_Cmd("AT+SYSTIMESTAMP?", &rsp, &length, 1000)){
+    if(!esp_at_send_cmd("AT+SYSTIMESTAMP?", &rsp, &length, 1000)){
         return false;
     }
 

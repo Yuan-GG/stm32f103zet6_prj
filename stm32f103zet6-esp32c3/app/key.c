@@ -4,7 +4,7 @@
 #include "key.h"
 
 
-void Key_Init(void){
+void key_init(void){
     /*   GPIO�ṹ�帳ֵ   */
     GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
@@ -13,17 +13,17 @@ void Key_Init(void){
     GPIO_Init(KEY_PORT, &GPIO_InitStructure);
 }
 
-bool Key_Pressed(void){
+bool key_pressed(void){
     if(GPIO_ReadInputDataBit(KEY_PORT, KEY_PIN) == KEY_DOWN){
-        Delayms(10);
+        delayms(10);
         if(GPIO_ReadInputDataBit(KEY_PORT, KEY_PIN) == KEY_DOWN){
-            Delayms(10);
+            delayms(10);
             return true;
         }
     }
     return false;
 }
 
-void Key_WaitRelease(void){
-    while(Key_Pressed());
+void key_wait_release(void){
+    while(key_pressed());
 }

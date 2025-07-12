@@ -15,16 +15,14 @@ typedef enum {
     STATE_TAIL
 } ESP_USARTState;
 
-void ESP_USART2_Init(void);
-void ESP_USART2_SendData(uint8_t *data, uint16_t length);
-void ESP_USART2_SendString(const char* str);
-void ESP_USART2_Printf(char *format, ...);
-void ESP_USART2_DMA_Async_Init(uint8_t *data, uint16_t length);
-void USART2_DMA_Transfer(uint16_t size);
-void ESP_USART2_Receive_Register(esp_usart_receive_callback_t cb);
-void ESP_USART2_Send_Finish_Register(esp_usart_send_finish_callback_t cb);
-bool ESP_USART2_RxGetFlag(void);
-static void ESP_USART2_RxClearFlag(void);
-void ESP_USART2_SendRxPacket(void);
+void esp_usart2_init(void);
+void esp_usart2_send_data(uint8_t *data, uint16_t length);
+void esp_usart2_send_string(const char* str);
+void esp_usart2_printf(char *format, ...);
+void esp_usart2_receive_register(esp_usart_receive_callback_t cb);
+void esp_usart2_send_finish_register(esp_usart_send_finish_callback_t cb);
+bool esp_usart2_rx_getflag(void);
+static void esp_usart2_rx_clearflag(void);
+void esp_usart2_rx_sendpacket(void);
 
 #endif /* __ESP_USART_H  */

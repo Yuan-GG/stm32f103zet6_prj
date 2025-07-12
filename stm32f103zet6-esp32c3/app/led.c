@@ -9,8 +9,8 @@
 
 static bool led_state = false;
 
-void Led_Init(void){
-    /*   GPIO结构体赋值   */
+void led_init(void){
+    /*   GPIO锟结构锟藉赋值   */
     GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Pin = LED_PIN;
@@ -19,7 +19,7 @@ void Led_Init(void){
     GPIO_SetBits(LED_PORT, LED_PIN);
 }
 
-void Led_Toggle(void){
+void led_toggle(void){
     led_state = !led_state;
     GPIO_WriteBit(LED_PORT, LED_PIN, led_state ? Bit_RESET : Bit_SET);
 }

@@ -9,8 +9,8 @@
 #define KEY_PIN GPIO_Pin_4
 #define KEY_DOWN Bit_SET
 
-void Key_Init(void);
-bool Key_Pressed(void);
-void Key_WaitRelease(void);
+void key_init(void);
+bool key_pressed(void);
+void key_wait_release(void);
 
 #endif /* __KEY_H  */

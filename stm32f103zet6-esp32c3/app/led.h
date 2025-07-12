@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 
-void Led_Init(void);
-void Led_Toggle(void);
+void led_init(void);
+void led_toggle(void);
 
 #endif /* __LED_H  */
